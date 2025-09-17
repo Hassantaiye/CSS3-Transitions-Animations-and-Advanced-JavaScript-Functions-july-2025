@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Week 7 - CSS3 + JavaScript Interactions</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>Bringing Web Pages to Life</h1>
+      <p>CSS3 Transitions & Animations + JavaScript Functions</p>
+    </header>
+
+    <main class="container">
+      <!-- Part 1: CSS3 Transitions and Animations -->
+      <section id="part1" class="card section">
+        <h2>Part 1: CSS3 Transitions & Keyframes</h2>
+        <p>Hover and observe transitions; some items animate continuously.</p>
+
+        <div class="demo-row">
+          <button class="btn primary">Hover Me</button>
+          <button class="btn outline">Also Hover Me</button>
+          <span class="badge pulse">NEW</span>
+        </div>
+
+        <div class="demo-row">
+          <div class="tile hover-tilt">Hover Tilt</div>
+          <div class="tile hover-raise">Hover Raise</div>
+          <div class="tile hover-wobble">Hover Wobble</div>
+        </div>
+
+        <div class="demo-row">
+          <div class="keyframe-box slide-loop">Sliding Box</div>
+          <div class="keyframe-box fade-loop">Fading Box</div>
+        </div>
+      </section>
+
+      <!-- Part 2: JavaScript Functions (parameters, returns, scope) -->
+      <section id="part2" class="card section">
+        <h2>Part 2: JavaScript Functions — Parameters, Returns, Scope</h2>
+        <p>Reusable functions compute values and demonstrate scope. Try the scaler.</p>
+
+        <form id="scaleForm" class="form">
+          <label>
+            Value
+            <input type="number" id="val" value="50" step="1">
+          </label>
+          <label>
+            In Min
+            <input type="number" id="inMin" value="0" step="1">
+          </label>
+          <label>
+            In Max
+            <input type="number" id="inMax" value="100" step="1">
+          </label>
+          <label>
+            Out Min
+            <input type="number" id="outMin" value="0" step="1">
+          </label>
+          <label>
+            Out Max
+            <input type="number" id="outMax" value="1" step="0.1">
+          </label>
+          <button type="submit" class="btn primary">Scale</button>
+        </form>
+
+        <div class="result" id="scaleResult" aria-live="polite">Scaled result will appear here.</div>
+      </section>
+
+      <!-- Part 3: Combining CSS + JS to trigger animations -->
+      <section id="part3" class="card section">
+        <h2>Part 3: Combine CSS Animations with JavaScript</h2>
+        <div class="demo-grid">
+          <!-- Trigger animation on a box -->
+          <div class="demo">
+            <h3>Trigger Box Animation</h3>
+            <div id="actionBox" class="action-box">Box</div>
+            <div class="controls">
+              <button id="animateBoxBtn" class="btn primary">Animate Box</button>
+            </div>
+          </div>
+
+          <!-- Flip card -->
+          <div class="demo">
+            <h3>Flip Card</h3>
+            <div class="flip-card" id="flipCard">
+              <div class="flip-inner">
+                <div class="flip-face front">Front</div>
+                <div class="flip-face back">Back</div>
+              </div>
+            </div>
+            <div class="controls">
+              <button id="flipBtn" class="btn outline">Flip</button>
+            </div>
+          </div>
+
+          <!-- Loading animation start/stop -->
+          <div class="demo">
+            <h3>Loading Animation</h3>
+            <div id="loader" class="loader" role="status" aria-live="polite"></div>
+            <div class="controls">
+              <button id="startLoadBtn" class="btn primary">Start</button>
+              <button id="stopLoadBtn" class="btn">Stop</button>
+            </div>
+          </div>
+
+          <!-- Modal that slides/fades in/out -->
+          <div class="demo">
+            <h3>Modal Popup</h3>
+            <div class="controls">
+              <button id="openModalBtn" class="btn primary">Open Modal</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Modal markup at end of body -->
+    <div id="modalOverlay" class="modal-overlay" aria-hidden="true">
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <h3 id="modalTitle">Hello!</h3>
+        <p>This modal slides in and fades out. Controlled via JavaScript.</p>
+        <button id="closeModalBtn" class="btn outline">Close</button>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <small>Week 7 Assignment — CSS3 + JavaScript</small>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+
